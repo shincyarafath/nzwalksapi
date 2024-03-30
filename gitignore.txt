@@ -1,1 +1,33 @@
-.vs/
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Chef.Common.Models
+{
+    public class RoleConfiguartionDto
+    {
+        public DateTime createddate { get; set; }
+        public string createdby { get; set; }
+
+        public DateTime modifieddate { get; set; }
+        public string modifiedby { get; set; }
+        public string RoleName { get; set; }
+        public int ModuleFeatureId { get; set; }
+        //public string ModuleFeatureCode { get; set; }
+        public bool IsView { get; set; }
+        public bool IsAdd { get; set; }
+        public bool IsEdit { get; set; }
+        public bool IsDelete { get; set; }
+        public bool IsApprove { get; set; }
+        public bool IsProcess { get; set; }
+        public bool IsPrint { get; set; }
+    }
+
+
+
+    ABS(rrii.transquantity - COALESCE(SUM(rii.transquantity) OVER(), 0)) AS balanceqty,
+
+}

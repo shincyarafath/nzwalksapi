@@ -10,8 +10,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<NZWalksDbContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("NzWalksConnectionSTring")));
+try
+{
+    builder.Services.AddDbContext<NZWalksDbContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("NzWalksConnectionSTring")));
+}
+catch (Exception ex)
+{
+    // Log or handle the exception here
+    Console.WriteLine($"An error occurred while configuring the DbContext: {ex}");
+}
 
 var app = builder.Build();
 
